@@ -8,7 +8,8 @@ halmaz: List[int] = []
 elemekSzama:int = None
 osszeg:int = None
 ketjegyuszamok = None
-paratlanszamokosszege = None
+paratlanszamokosszegevaltozo = None
+nullaravegzodoszamok= None
 
 def hiba(uzenet:str)-> None:
     print(uzenet)
@@ -82,6 +83,30 @@ def sum(osszeadandoHalmaz:List[int])-> int:
     
     return eredmeny
 
+def nullaraVegzodoSzamokSzama(keresesHalmaza:List[int])-> int:
+    eredmeny:int = 0
+
+    for item in keresesHalmaza:
+        if(item % 10 == 0):
+            eredmeny+= 1
+
+
+    return eredmeny
+
+
+def novekvosorrendukiiras(keresesHalmaza:List[int])-> List[int]:
+    temp:int = None
+
+    for i in range(0, len(keresesHalmaza), 1):
+        for j in range(i + 1, len(keresesHalmaza), 1):
+            if(keresesHalmaza[j] < keresesHalmaza[i]):
+                temp = keresesHalmaza[i]
+                keresesHalmaza[i] = keresesHalmaza[j]
+                keresesHalmaza[j] = temp
+    return keresesHalmaza
+
+
+
 #főprogram
 
 elemekSzama= elemszamBekerese()
@@ -116,5 +141,13 @@ print("\nA halmaz egyjegyű elemei:")
 egyjegyuszamokszama(halmaz)
 
 #Számítsuk ki a páratlan számok összegét
-print(f"\n A halmaz páratlan elemeinek összege: {paratlanszamokosszege}")
-paratlanszamokosszege = paratlanSzamokOsszege(halmaz)
+paratlanszamokosszegevaltozo = paratlanSzamokOsszege(halmaz)
+print(f"\n A halmaz páratlan elemeinek összege: {paratlanszamokosszegevaltozo}")
+
+#Számoljuk meg hány szám végződik nullára
+nullaravegzodoszamok = nullaraVegzodoSzamokSzama(halmaz)
+print(f"\nA halmazban {nullaravegzodoszamok} szám végződik nullára.")
+
+#halmaz rendezése növekvő sorrendbe:
+novekvosorrend: List[int] = novekvosorrendukiiras(halmaz)
+print(f"\n A halmaz növekvő sorrendben: {novekvosorrend}")
