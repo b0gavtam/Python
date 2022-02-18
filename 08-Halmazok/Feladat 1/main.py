@@ -8,8 +8,12 @@ halmaz: List[int] = []
 elemekSzama:int = None
 osszeg:int = None
 ketjegyuszamok = None
+egyjegyuszamok:int = None
 paratlanszamokosszegevaltozo = None
 nullaravegzodoszamok= None
+legnagyobbszam:int = None
+legkisebbszam:int = None
+
 
 def hiba(uzenet:str)-> None:
     print(uzenet)
@@ -105,7 +109,24 @@ def novekvosorrendukiiras(keresesHalmaza:List[int])-> List[int]:
                 keresesHalmaza[j] = temp
     return keresesHalmaza
 
+def legnagyobbSzamKiirasa(keresesHalmaza:List[int])-> int:
+    maximum:int=keresesHalmaza[0]
+    for index in range(1,len(keresesHalmaza)):
+        if(keresesHalmaza[index] > maximum):
+            maximum = keresesHalmaza[index]
+    
+    return maximum
 
+
+def legkisebbSzamKiirasa(keresesHalmaza:List[int])-> int:
+    index:int = 0
+    minimum:int=keresesHalmaza[0]
+    for i in range(1,len(keresesHalmaza)):
+        if(keresesHalmaza[i] < minimum):
+            minimum = keresesHalmaza[i]
+            index = i
+    
+    return index
 
 #főprogram
 
@@ -138,7 +159,7 @@ print(f"\nA halmazban {ketjegyuszamok} kétjegyű szám van.")
 
 #Írassuk ki az egyjegyű számokat
 print("\nA halmaz egyjegyű elemei:")
-egyjegyuszamokszama(halmaz)
+egyjegyuszamok=egyjegyuszamokszama(halmaz)
 
 #Számítsuk ki a páratlan számok összegét
 paratlanszamokosszegevaltozo = paratlanSzamokOsszege(halmaz)
@@ -147,7 +168,16 @@ print(f"\n A halmaz páratlan elemeinek összege: {paratlanszamokosszegevaltozo}
 #Számoljuk meg hány szám végződik nullára
 nullaravegzodoszamok = nullaraVegzodoSzamokSzama(halmaz)
 print(f"\nA halmazban {nullaravegzodoszamok} szám végződik nullára.")
-
+"""
 #halmaz rendezése növekvő sorrendbe:
 novekvosorrend: List[int] = novekvosorrendukiiras(halmaz)
 print(f"\n A halmaz növekvő sorrendben: {novekvosorrend}")
+"""
+#halmaz legnagyobb számának megállapítása és kiírása:
+legnagyobbszam = legnagyobbSzamKiirasa(halmaz)
+print(f"\n A halmaz legnagyobb száma: {legnagyobbszam}")
+
+#halmaz legkisebb számának megállapítása és kiírása:
+legkisebbszam = legkisebbSzamKiirasa(halmaz)
+print(f"\n A halmaz legkisebb számának indexe: {legkisebbszam}")
+#^nem működik a sorbarendezés miatt, referenciaértéket kap meg
