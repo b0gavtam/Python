@@ -4,8 +4,6 @@
 	Számoljuk meg hány szám van 500 felett!"""
 
 
-from typing import *
-import random
 import os
 import time
 
