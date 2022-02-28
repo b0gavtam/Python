@@ -14,7 +14,7 @@ osszeg:int = None
 szam:int = None
 paratlan:int = None
 hat:int = None
-dic:Dict[int,int]
+legtobbetEloforduloszamok:List[int] = []
 
 def listaFeltoltesekRandomSzamokkal(elem:int)-> List[int]:
     eredmeny: List[int] = []
@@ -87,7 +87,7 @@ def legnagyobbKulcsErteke(szotar: Dict[int, int])-> List[int]:
 
 def legtobbetEloforduloSzam(lista:List[int])-> List[int]:
     szotar: Dict[int, int] = {} #Dict[kulcs-> szám, value -> szám előfordulási száma]
- 
+    eredmeny: List[int] =  []
     #meghatározzuk az előfordulási számokat
     for szam in lista:
         if(szam in szotar):
@@ -97,8 +97,7 @@ def legtobbetEloforduloSzam(lista:List[int])-> List[int]:
 
     #lista = [2,4,1,1,6,3,1]
     #szotar = {1:3, 2:1, 3:1, 4:1, 6:1}
-
-    eredmeny: List[int] = legnagyobbKulcsErteke(szotar)
+    eredmeny = legnagyobbKulcsErteke(szotar)
     return eredmeny
 
 #főprogram
@@ -114,6 +113,6 @@ print(f"\nA páratlan számok száma: {paratlan}")
 hat = hatosokszama(halmaz)
 print(f"\nHatos dobások száma: {hat} ")
 
-legtobbetEloforduloszamok:List[int] = legtobbetEloforduloSzam(halmaz)
+legtobbetEloforduloszamok = legtobbetEloforduloSzam(halmaz)
 print(f"A legtöbbet előforduló szám(ok): ")
-print(legtobbetEloforduloSzam)
+print(legtobbetEloforduloszamok)
