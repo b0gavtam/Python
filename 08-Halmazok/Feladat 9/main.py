@@ -14,10 +14,12 @@ szetvalasztas(1, halmaz)
 
 from typing import *
 import random
+import time
+
 
 halmaz: List[int] = []
 elemekSzama:int = None
-
+eredmenySzotar:Dict[str, List[int]] = {}
 
 
 def elemszamBekerese()-> int:
@@ -35,7 +37,7 @@ def elemszamBekerese()-> int:
 
 def ListaFeltoltesekRandomSzamokkal(elem:int)-> List[int]:
     eredmeny: List[int] = []
-    for i in range(elem + 1):
+    for i in range(elem):
         eredmeny.append(random.randint(-100,100))
         time.sleep(0.005)
 
@@ -47,9 +49,16 @@ def halmazKiirasa(kiirandoHalmaz:List[int])-> None:
 
 
 
-def szetvalasztas()-> Dict[str, List[int]]:
+def szetvalasztas(lista:List[int])-> Dict[str, List[int]]:
     dictionary: Dict[str, List[int]] = { "pozitivHalmaz" : [], "negativHalmaz" : [] }
+     
+    for item in lista:
+        if(item > 0):
+            dictionary["pozitivHalmaz"].append(item)
+        elif(item < 0):
+            dictionary["negativHalmaz"].append(item)    
 
+    return dictionary        
 
 
 
@@ -57,4 +66,12 @@ def szetvalasztas()-> Dict[str, List[int]]:
 elemekSzama= elemszamBekerese()
 halmaz = ListaFeltoltesekRandomSzamokkal(elemekSzama)
 print("A halamaz elemei: \t")
-halmazKiirasa(halmaz)    
+halmazKiirasa(halmaz)
+eredmenySzotar = szetvalasztas(halmaz)
+
+print("Pozitív számok halmaza: ")
+print(eredmenySzotar["pozitivHalmaz"])
+
+
+print("Negatív számok halmaza: ")
+print(eredmenySzotar["negativHalmaz"])

@@ -62,7 +62,7 @@ def osszeadas(keresesHalmaza:List[int])-> int:
 
     megoldás 2
     eredmeny:List[int]=halmaz1.copy()
-    eredmeny += halmaz2.copy()   
+    eredmeny += halmaz2.copy()
     
     return eredmeny
 """
