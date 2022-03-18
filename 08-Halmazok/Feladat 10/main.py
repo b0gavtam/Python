@@ -36,7 +36,7 @@ def unio(aHalmaz:List[int], bHalmaz:List[int], elemekszama:int)-> List[int]:
         eredmeny.append(aHalmaz[i])
         eredmeny.append(bHalmaz[i])
         
-        
+
     return eredmeny
 
 
