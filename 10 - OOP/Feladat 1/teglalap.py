@@ -7,6 +7,8 @@ class Teglalap:
         self.hossz = hossz
         self.szelesseg = szelesseg
 
+    def __str__(self) ->str:
+        return f" hossz = {self.hossz} \nszélesség = {self.szelesseg} \nT = {self.terulet()} \nK = {self.kerulet()}" 
 
     def terulet(self)-> float:
         return self.hossz*self.szelesseg

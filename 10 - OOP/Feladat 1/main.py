@@ -1,5 +1,16 @@
-from Teglalap import Teglalap
+from teglalap import *
+from kor import *
 
 
 #példányosítás
-téglalap: Teglalap = Teglalap(10,20)
+teglalap1: Teglalap = Teglalap(10,20)
+print(teglalap1.__str__())
+
+
+negyzet:Teglalap = Teglalap(10,10)
+
+print(negyzet)
+
+
+korocske:Kor = Kor(10)
+print(korocske)
