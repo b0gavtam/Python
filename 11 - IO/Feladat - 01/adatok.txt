@@ -1,25 +1,25 @@
-Antalfai Martin	3,53
-Balogh Róbert Lajos	3,63
-Csavar István	2,88
-Csomós Emília Krisztina	3,19
-Dudoma Borbála	3,00
-Faragó Zsolt Erik	4,00
-Farkas Erzsébet Patrícia	2,92
-Farkas Rebeka	3,33
-Haraszti Noémi	3,21
-Jámbor Evelin Mária	2,64
-Jambricska Szilvia	3,63
-Kakucsi Emese Barbara	2,50
-Ludász Petra	2,64
-Málik Patrik	2,50
-Mazán Melinda	3,08
-Ökrös Krisztina	3,25
-Portörõ Zsolt Sándor	3,54
-Szántó Ágnes	2,67
-Szilágyi Beatrix	3,50
-Szoboszlai Norbert	2,23
-Tar Viktória	4,00
-Tóth Martin Mátyás	2,83
-Ungor Dávid Erik	2,79
-Varga László Krisztián	3,31
-Vizi Viktor Péter	3,83
+Antalfai Martin	3.53
+Balogh Rï¿½bert Lajos	3.63
+Csavar Istvï¿½n	2.88
+Csomï¿½s Emï¿½lia Krisztina	3.19
+Dudoma Borbï¿½la	3.00
+Faragï¿½ Zsolt Erik	4.00
+Farkas Erzsï¿½bet Patrï¿½cia	2.92
+Farkas Rebeka	3.33
+Haraszti Noï¿½mi	3.21
+Jï¿½mbor Evelin Mï¿½ria	2.64
+Jambricska Szilvia	3.63
+Kakucsi Emese Barbara	2.50
+Ludï¿½sz Petra	2.64
+Mï¿½lik Patrik	2.50
+Mazï¿½n Melinda	3.08
+ï¿½krï¿½s Krisztina	3.25
+Portï¿½rï¿½ Zsolt Sï¿½ndor	3.54
+Szï¿½ntï¿½ ï¿½gnes	2.67
+Szilï¿½gyi Beatrix	3.50
+Szoboszlai Norbert	2.23
+Tar Viktï¿½ria	4.00
+Tï¿½th Martin Mï¿½tyï¿½s	2.83
+Ungor Dï¿½vid Erik	2.79
+Varga Lï¿½szlï¿½ Krisztiï¿½n	3.31
+Vizi Viktor Pï¿½ter	3.83
