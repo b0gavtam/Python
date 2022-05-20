@@ -100,22 +100,24 @@ class Osztaly:
 
         diakAtlagok:Dict[str, int] = {}
 
+        alsohatarertek:int = 0
         hatarertekek:Dict[str,int] = {
-            "elégtelen" : 1.99,
-            "elégséges" : 2.99,
-            "jó" : 3.99,
-            "jeles" : 4.99,
-            "kitűnő" : 5.00
+            "elégtelen" : 2,
+            "elégséges" : 3,
+            "jó" : 4,
+            "jeles" : 5,
+            "kitűnő" : 6,
         }
 
         for (key,value) in hatarertekek.items():
             darab:int = 0
 
             for diak in diakok:
-                if(diak.atlag < value):
+                if(diak.atlag >= alsohatarertek and diak.atlag < value):
                     darab+=1
 
             diakAtlagok[key] = darab
+            alsohatarertek = value
         
         return diakAtlagok
                 
